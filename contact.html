@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cooking Recipes - Contact</title>
+</head>
+<body>
+
+    <header>
+        <h1>Cooking Recipes</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+
+    <p>Have questions or feedback? Reach out to us using the form below:</p>
+
+    <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="button" class="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <div id="thankYouMessage" style="display: none;">
+        <p>Thank you for reaching out to us!</p>
+    </div>
+</section>
+
+<script>
+    function submitForm() {
+        // You can add additional validation logic here before displaying the thank you message
+
+        // Display the thank you message and hide the form
+        document.getElementById('contactForm').style.display = 'none';
+        var thankYouMessage = document.getElementById('thankYouMessage');
+        thankYouMessage.style.display = 'block';
+        thankYouMessage.style.marginTop = '50px'; // Adjust margin for better placement
+    }
+</script>
+
+    <footer>
+        <p>&copy; 2023 Cooking Recipes. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
